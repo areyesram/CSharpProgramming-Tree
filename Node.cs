@@ -9,7 +9,7 @@
 
         public Node(T data)
         {
-            this.Data = data;
+            Data = data;
         }
     }
 }
