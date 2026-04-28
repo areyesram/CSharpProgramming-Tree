@@ -4,7 +4,7 @@ namespace areyesram
 {
     internal class Tree<T> where T : IComparable<T>
     {
-        private Node<T> _root;
+        private Node<T>? _root;
 
         public Tree()
         {
@@ -52,7 +52,7 @@ namespace areyesram
             return Find(_root, data);
         }
 
-        private static bool Find(Node<T> root, T data)
+        private static bool Find(Node<T>? root, T data)
         {
             if (root == null)
                 return false;
@@ -69,7 +69,7 @@ namespace areyesram
             Traverse(_root, visit);
         }
 
-        private static void Traverse(Node<T> root, Action<T> visit)
+        private static void Traverse(Node<T>? root, Action<T> visit)
         {
             if (root == null) return;
 
